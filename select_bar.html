@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Select Bar with Logos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .dropdown-container {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        select {
+            width: 300px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+            width: 90%;
+        }
+
+        .logo-item {
+            text-align: center;
+        }
+
+        .logo-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border: 2px solid #ccc; /* Subtle border for all images */
+            border-radius: 5px; /* Rounded corners */
+            transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .logo-item img.active {
+            transform: scale(1.1);
+            border: 3px solid #007bff; /* Highlighted border for active image */
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Slight glow for active image */
+        }
+
+        .logo-item span {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container">
+        <select id="company-select">
+            <option value="" disabled selected>Select</option>
+            <option value="google">Google</option>
+            <option value="microsoft">Microsoft</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="facebook">Facebook</option>
+            <option value="oracle">Oracle Corporation</option>
+            <option value="apple">Apple</option>
+            <option value="integrichain">IntegriChain</option>
+            <option value="apache">Apache</option>
+            <option value="tcs">TCS</option>
+            <option value="wipro">Wipro InfoTech</option>
+            <option value="hcl">HCL Technologies</option>
+        </select>
+    </div>
+
+    <div class="logo-container" id="logo-container">
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" data-company="google">
+            <span>Google</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" data-company="microsoft">
+            <span>Microsoft</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/390px-Oracle_logo.svg.png" alt="Oracle Logo" data-company="oracle">
+            <span>Oracle Corporation</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" data-company="apple">
+            <span>Apple</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Reliance_Industries_Logo.svg/330px-Reliance_Industries_Logo.svg.png" alt="Reliance Logo" data-company="reliance">
+            <span>IntegriChain</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/300px-Infosys_logo.svg.png" alt="Infosys Logo" data-company="infosys">
+            <span>Apache</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/1024px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS Logo" data-company="tcs">
+            <span>TCS</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/330px-Wipro_Primary_Logo_Color_RGB.svg.png" alt="Wipro Logo" data-company="wipro">
+            <span>Wipro InfoTech</span>
+        </div>
+        <div class="logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/HCLTech-new-logo.svg/330px-HCLTech-new-logo.svg.png" alt="HCL Logo" data-company="hcl">
+            <span>HCL Technologies</span>
+        </div>
+    </div>
+
+   
+</body>
+</html>
